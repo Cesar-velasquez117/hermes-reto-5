@@ -18,7 +18,6 @@ root.render(
         <Canvas
             camera={cameraSettings}
             shadows={true}
-            onPointerMissed={console.log("Clickeaste fuera bro")}
         >
             <Suspense>
                 <Experience />
