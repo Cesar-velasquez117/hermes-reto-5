@@ -23,12 +23,13 @@ const VideoWall = () => {
         }else{
             setPlayingVideo(!playingVideo);
             video.play();
+            video.muted = false;
         }
     };
 
     return (
         <mesh onDoubleClick={handleOnClick} receiveShadow position-z={5} rotation-x={Math.PI} rotation-z={Math.PI}>
-            <planeGeometry args={[10,10]}/>
+            <planeGeometry args={[7,7]}/>
             <meshBasicMaterial side={DoubleSide} toneMapped={false}>
                 <videoTexture attach="map" args={[video]} ref={textureRef}/>
             </meshBasicMaterial>

@@ -22,7 +22,7 @@ export default function ImageWall(props){
 
     return (
         <mesh {...props} ref={imgWallRef} receiveShadow position-z={-5} rotation-y={Math.PI * 1} dispose={null} onPointerOver={handleImage}>
-                <planeGeometry args={[10,10]} />
+                <planeGeometry args={[7,7]} />
                 <meshStandardMaterial map={currentTexture} color="whitered" side={DoubleSide}/>
         </mesh>
     );
